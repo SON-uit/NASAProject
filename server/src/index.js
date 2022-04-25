@@ -36,11 +36,11 @@ app.use(
 );
 app.use(morgan("combined"));
 app.use(express.json());
-app.use(express.static(path.join(__dirname,'..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 const planetsRouter = require("./routes/planetsRouter.js");
 const launchesRouter = require("./routes/launchesRouter");
 app.use("/planet", planetsRouter);
 app.use("/launch", launchesRouter);
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname,'..','public','index.html'));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
