@@ -1,4 +1,4 @@
-const baseAPI = "http://localhost:5000";
+const baseAPI = "";
 async function httpGetPlanets() {
   const response = await fetch(`${baseAPI}/planet`);
   return await response.json();
